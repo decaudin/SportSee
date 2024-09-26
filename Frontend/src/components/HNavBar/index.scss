@@ -1,0 +1,43 @@
+.hNavBar {
+    display: flex;
+    background: #020203;
+    height: 91px;
+
+    .logo {
+        display: flex;
+        width: 16%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 24px;
+
+        .logoImg {
+            width: 57.196px;
+            height: 57.703px;
+        }
+        
+        .groupImg {
+            margin-bottom: -5px;
+        }
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        
+        .hNav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            width: 100%;
+
+            .hLink {
+                text-decoration: none;
+                color: #FFF;
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
