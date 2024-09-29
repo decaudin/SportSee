@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { DataProvider } from "../../utils/DataContext";
-import HNavBar from "../../components/HNavBar";
-import UserPage from "../../components/UserPage";
+import HNavBar from "../../components/NavBar/HNavBar";
+import UserPage from "../../components/Layout/UserPage";
 
 const Profile = () => {
 
@@ -13,8 +13,11 @@ const Profile = () => {
             <HNavBar />
             <UserPage />                                  
         </DataProvider>
-        
     )
 }
 
 export default Profile;
+
+
+
+

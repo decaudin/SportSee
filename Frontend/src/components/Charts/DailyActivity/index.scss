@@ -1,0 +1,49 @@
+.dailyActivity {
+    width: 70%;
+    height: 255px;
+    border-radius: 5px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+    margin-top: 80px;
+    padding-bottom: 65px;
+
+    .dailyHeader {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding-top: 10px;
+
+        h2 {
+        font-size: 15px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 46%;
+            list-style-type: none;
+
+            li {
+                position: relative;
+                padding-left: 20px;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 2%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: black;
+                }
+        
+                &.red::before {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}

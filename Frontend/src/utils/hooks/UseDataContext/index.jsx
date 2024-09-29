@@ -4,6 +4,6 @@ import { DataContext } from '../../DataContext';
 
 export const useData = () => {
     
-    const { userData, userActivity, userAverageSessions, userPerformance, isLoading, isError } = useContext(DataContext);
-    return { userData, userActivity, userAverageSessions, userPerformance, isLoading, isError }
+    const { userId, userData, userActivity, userAverageSessions, userPerformance, isLoading, isError } = useContext(DataContext);
+    return { userId, userData, userActivity, userAverageSessions, userPerformance, isLoading, isError }
 }

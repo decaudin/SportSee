@@ -1,5 +1,5 @@
 import UserData from "../UserData";
-import VNavBar from "../VNavBar";
+import VNavBar from "../../NavBar/VNavBar";
 import "./index.scss";
 
 

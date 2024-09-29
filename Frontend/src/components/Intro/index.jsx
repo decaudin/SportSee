@@ -5,11 +5,9 @@ const Intro = () => {
 
     const { userData, isLoading, isError } = useData();
 
-    console.log(userData);
-
     return (
         <div className='intro'>
-            {isLoading && <p>chargement ...</p>}
+            {isLoading && <p>Chargement ...</p>}
             {isError && <p>Une erreur est survenue</p>}
             {userData && (
                 <>

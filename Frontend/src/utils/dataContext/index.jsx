@@ -9,7 +9,7 @@ export const DataProvider = ({ userId, children }) => {
   const { userData, userActivity, userAverageSessions, userPerformance, isLoading, isError } = useUserData(userId);
 
   return (
-    <DataContext.Provider value={{ userData, userActivity, userAverageSessions, userPerformance, isLoading, isError }}>
+    <DataContext.Provider value={{ userId, userData, userActivity, userAverageSessions, userPerformance, isLoading, isError }}>
       {children}
     </DataContext.Provider>
   );

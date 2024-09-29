@@ -29,7 +29,7 @@ export const useFetch = (url) => {
         try {
           const cleanedUrl = url.replace(/http:\/\/localhost:3000/, '').replace(/\/\d+/, '');
           const mockKey = Object.keys(mockData).find(key => {
-          const keyParts = key.split('/').filter(Boolean); 
+          const keyParts = key.split('/').filter(Boolean);
           const urlParts = cleanedUrl.split('/').filter(Boolean);
     
           return urlParts.length === keyParts.length && keyParts.every((part, index) => part === urlParts[index]);
@@ -69,11 +69,10 @@ export const useFetch = (url) => {
             const resultsArray = Array.isArray(result.data) ? result.data : [result.data];
 
             if (url.split('/').length === 5) {
-              const userData = resultsArray.find(item => item.id === userId);
-              console.log(userData);
+              const userData = resultsArray.find(item => item.id === userId);              
 
               if (userData) {
-                const normalizer = new UserNormalizer(resultsArray);
+                const normalizer = new UserNormalizer(userData);
                 const normalizedData = normalizer.normalize();
                 setData(normalizedData);
               } else {
@@ -82,9 +81,8 @@ export const useFetch = (url) => {
               }
               
             } else if (url.includes('/activity') || url.includes('/average-sessions') || url.includes('/performance')) {
-                const userData = resultsArray.find(item => item.userId === userId);
-                console.log(userData);
-
+              const userData = resultsArray.find(item => item.userId === userId);
+              
                 if (userData) {
                   setData(userData);
                 } else {

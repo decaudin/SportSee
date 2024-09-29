@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-import meditate from '../../assets/meditate.svg';
-import swim from '../../assets/swim.svg';
-import bike from '../../assets/bike.svg';
-import umbbell from '../../assets/umbbell.svg';
+import meditate from '../../../assets/meditate.svg';
+import swim from '../../../assets/swim.svg';
+import bike from '../../../assets/bike.svg';
+import umbbell from '../../../assets/umbbell.svg';
 
 const VNavBar = () => {
 

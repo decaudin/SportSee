@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useData } from "../../../utils/hooks/UseDataContext";
 import './index.scss';
-import logo from '../../assets/logo.svg';
-import group from '../../assets/group.svg'
+import logo from '../../../assets/logo.svg';
+import group from '../../../assets/group.svg'
 
 const HNavBar = () => {
+
+    const { userId } = useData();
 
     const handleFakeLink = (e) => {
         e.preventDefault();
@@ -19,7 +22,7 @@ const HNavBar = () => {
             <nav className='horizontalNav'>
                 <ul className='hNav'>
                     <li><Link to="#" className="hLink" onClick={handleFakeLink}>Accueil</Link></li>
-                    <li><Link to="/user/:id" className="hLink">Profil</Link></li>
+                    <li><Link to={`/user/${userId}`} className="hLink">Profil</Link></li>
                     <li><Link to="#" className="hLink" onClick={handleFakeLink}>Réglage</Link></li>
                     <li><Link to="#" className="hLink" onClick={handleFakeLink}>Communauté</Link></li>
                 </ul>
