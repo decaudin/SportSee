@@ -18,32 +18,22 @@ const AverageSessionLength = () => {
             {userAverageSessions && (
                 <>
                     <h2 className='averageTitle'>Durée moyenne des sessions</h2>
-                    <ResponsiveContainer >
+                    <ResponsiveContainer>
                         <LineChart data={userAverageSessions.sessions}>
-                        <XAxis 
-                            dataKey="day" 
-                            tickFormatter={formatDay} 
-                            stroke="#fff"
-                            axisLine={false}
-                            tickLine={false}
-                        />
-                        <YAxis 
-                            dataKey="sessionLength" 
-                            axisLine={false}
-                            tick={false} 
-                        />
-                        <Tooltip content={<AverageLenghtTooltip />} />
-                        <Line 
-                            type="monotone" 
-                            dataKey="sessionLength" 
-                            stroke="#fff"
-                            dot={false}                     
-                            activeDot={{ stroke: "#fff", strokeWidth: 2, fill: "#fff", r: 5 }} 
-                        />
+                            <XAxis dataKey="day" tickFormatter={formatDay} stroke="#fff" axisLine={false} tickLine={false} />
+                            <YAxis dataKey="sessionLength" axisLine={false} tick={false} />
+                            <Tooltip content={<AverageLenghtTooltip />} cursor={false}/>
+                            <Line 
+                                type="monotone" 
+                                dataKey="sessionLength" 
+                                stroke="#fff" 
+                                strokeWidth={1.5}
+                                dot={false} 
+                                activeDot={{ stroke: "#fff", fill: "#fff", r: 4 }}
+                            />
                         </LineChart>
                     </ResponsiveContainer>
                 </>
-                
             )}
         </div>
     );

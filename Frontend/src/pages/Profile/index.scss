@@ -1,9 +1,29 @@
 .userPage {
     display: flex;
+    width: 100%;
 
     .userData {
         width: 100%;
         margin-left: 125px;
-        margin-top: 20px;
+    //    width: calc(100% - 117px);
+    //    margin-left: 100px;
+        margin-top: 40px;
+
+        .userInfos {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+
+            .userCharts {
+                width: 75%;
+
+                .smallCharts {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                }
+            }
+        }
     }
 }

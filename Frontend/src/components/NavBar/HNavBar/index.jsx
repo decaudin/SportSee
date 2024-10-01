@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useData } from "../../../utils/hooks/UseDataContext";
 import './index.scss';
-import logo from '../../../assets/logo.svg';
-import group from '../../../assets/group.svg'
+import logo from '../../../assets/HNavBar/logo.svg';
+import group from '../../../assets/HNavBar/group.svg'
 
 const HNavBar = () => {
 
