@@ -1,30 +1,11 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { useData } from '../../../utils/hooks/UseDataContext';
+import { customedLabels, formatPerformanceData } from '../CustomToolkits/PerformanceToolkits';
 import "./index.scss";
 
 const Performance = () => {
 
     const { userPerformance, isLoading, isError } = useData();
-
-    const kindTranslation = {
-        1: 'Cardio',
-        2: 'Energie',
-        3: 'Endurance',
-        4: 'Force',
-        5: 'Vitesse',
-        6: 'Intensité'
-    };
-
-    const formatPerformanceData = (performance) => {
-
-        const order = [6, 5, 4, 3, 2, 1];
-        const sortedData = performance.data.sort((a, b) => order.indexOf(a.kind) - order.indexOf(b.kind));
-
-        return sortedData.map(item => ({
-            value: item.value,
-            subject: kindTranslation[item.kind]
-        }));
-    };
 
     return (
         <div className='performance'>
@@ -32,10 +13,10 @@ const Performance = () => {
             {isError && <p>Une erreur est survenue</p>}
             {userPerformance && (
                 <ResponsiveContainer>
-                    <RadarChart outerRadius="80%" data={formatPerformanceData(userPerformance)}>
-                        <PolarGrid />
-                        <PolarAngleAxis dataKey="subject" stroke="#fff" />
-                        <Radar name="Performance" dataKey="value" stroke="red" fill="red" fillOpacity={0.6} />
+                    <RadarChart data={formatPerformanceData(userPerformance)}>
+                        <PolarGrid radialLines={false} />
+                        <PolarAngleAxis dataKey="subject" stroke="#fff" tickLine={false} tick={(props) => customedLabels(props)} />
+                        <Radar name="Performance" dataKey="value" fill="rgba(255, 1, 1, 0.70)" />
                     </RadarChart>
                 </ResponsiveContainer>
             )}

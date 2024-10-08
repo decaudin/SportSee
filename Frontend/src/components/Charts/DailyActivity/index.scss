@@ -1,15 +1,14 @@
 .dailyActivity {
-    height: 255px;
+    height: 320px;
     border-radius: 5px;
     background: #FBFBFB;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
-    padding-bottom: 65px;
+    padding-left: 34px;
+    padding-right: 8px;
 
     .dailyHeader {
         display: flex;
         justify-content: space-between;
-        width: 90%;
-        margin: auto;
         padding-top: 10px;
 
         h2 {
@@ -19,14 +18,15 @@
 
         ul {
             display: flex;
-            justify-content: space-between;
-            width: 46%;
+            justify-content: space-around;
+            width: 45%;
             list-style-type: none;
 
             li {
                 position: relative;
                 padding-left: 20px;
                 color: #74798C;
+                font-size: 14px;
                 
                 &::before {
                     content: '';
@@ -45,5 +45,10 @@
                 }
             }
         }
+    }
+
+    .recharts-responsive-container {
+        height: 70% !important;
+        margin-top: 25px;
     }
 }

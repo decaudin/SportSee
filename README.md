@@ -16,12 +16,10 @@ SportSee offre une interface simple et intuitive pour visualiser les données d'
 
 Le projet comporte un système de switch entre l'utilisation des données mockées et celles de l'API. Cela se gère via un fichier .env.
 
-Créez un fichier .env à la racine du répertoire Frontend avec la variable suivante :
+Créez un fichier .env à la racine du répertoire Frontend avec la variable suivante : VITE_USE_MOCKS
 
-VITE_USE_MOCKS=true
-
-- Si VITE_USE_MOCKS est défini sur true, l'application utilisera les données mockées.
-- Si VITE_USE_MOCKS est défini sur false, l'application utilisera les données de l'API.
+- Définissez VITE_USE_MOCKS=true pour utiliser les données mockées.
+- Définissez VITE_USE_MOCKS=false pour utiliser les données issues de l'API.
 
 ### Lancer le Backend
 
@@ -43,8 +41,8 @@ yarn dev
 
 Deux utilisateurs sont actuellement disponibles. Vous pouvez consulter leur page aux adresses suivantes :
 
-Utilisateur 12 : http://localhost:5173/user/12
-Utilisateur 18 : http://localhost:5173/user/18
+- Utilisateur 12 : http://localhost:5173/user/12
+- Utilisateur 18 : http://localhost:5173/user/18
 
 
 

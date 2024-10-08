@@ -1,5 +1,5 @@
 import { useData } from '../../../utils/hooks/UseDataContext';
-import AverageLenghtTooltip from '../CustomTooltips/AverageLenghtTooltip';
+import {AverageLenghtTooltip, CustomCursor, CustomActiveDot } from '../CustomToolkits/AverageLenghtToolkits';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import "./index.scss";
 
@@ -17,20 +17,13 @@ const AverageSessionLength = () => {
             {isError && <p>Une erreur est survenue</p>}
             {userAverageSessions && (
                 <>
-                    <h2 className='averageTitle'>Durée moyenne des sessions</h2>
                     <ResponsiveContainer>
+                        <h2 className='averageTitle'>Durée moyenne des sessions</h2>
                         <LineChart data={userAverageSessions.sessions}>
                             <XAxis dataKey="day" tickFormatter={formatDay} stroke="#fff" axisLine={false} tickLine={false} />
                             <YAxis dataKey="sessionLength" axisLine={false} tick={false} />
-                            <Tooltip content={<AverageLenghtTooltip />} cursor={false}/>
-                            <Line 
-                                type="monotone" 
-                                dataKey="sessionLength" 
-                                stroke="#fff" 
-                                strokeWidth={1.5}
-                                dot={false} 
-                                activeDot={{ stroke: "#fff", fill: "#fff", r: 4 }}
-                            />
+                            <Tooltip content={<AverageLenghtTooltip />} cursor={<CustomCursor />} />
+                            <Line type="natural" dataKey="sessionLength" stroke="#fff" strokeWidth={2} dot={false} activeDot={<CustomActiveDot />} />
                         </LineChart>
                     </ResponsiveContainer>
                 </>
