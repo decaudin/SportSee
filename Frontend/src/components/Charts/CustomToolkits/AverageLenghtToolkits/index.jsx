@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 import "./index.scss";
 
 export const AverageLenghtTooltip = ({ active, payload }) => {
+
     if (active && payload && payload.length) {
+
     return (
         <div className="averageTooltip">
             <p >{`${payload[0].value} min`}</p>
@@ -37,7 +39,9 @@ CustomCursor.propTypes = {
 };
 
 export const CustomActiveDot = (props) => {
+
     const { cx, cy } = props;
+    
     return (
         <>
             <circle cx={cx} cy={cy} r={13} fill="rgba(255, 255, 255, 0.20)" />

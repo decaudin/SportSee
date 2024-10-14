@@ -8,13 +8,13 @@
     .logo {
         display: flex;
         width: 16%;
-        justify-content: space-around;
         align-items: center;
-        margin-left: 24px;
+        margin-left: 18px;
 
         .logoImg {
             width: 57.196px;
             height: 57.703px;
+            margin-right: 7%;
         }
         
         .groupImg {
@@ -23,7 +23,7 @@
     }
 
     .horizontalNav {
-        width: 80%;
+        width: 83%;
         display: flex;
         
         .hNav {
@@ -37,7 +37,6 @@
                 text-decoration: none;
                 color: #FFF;
                 font-size: 24px;
-                font-weight: 500;
             }
         }
     }

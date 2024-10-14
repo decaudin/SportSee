@@ -7,13 +7,14 @@
 
     .scoreTitle {
         font-size: 15px;
+        margin-top: 25px;
         margin-left: 20px;
     }
 
     .scoreChartContainer {
         position: relative;
         height: 100%;
-        margin-top: -40px;
+        margin-top: -52px;
 
         .circle {
             position: absolute;
@@ -42,13 +43,13 @@
             }
     
             .percentage {
-                font-size: 24px;
+                font-size: 1.9vw;
                 font-weight: 700;
                 color: #282D30;
             }
             
             p {
-                font-size: 16px;
+                font-size: 1.1vw;
                 margin: 0;
                 color: #74798C;
                 margin-top: 3px;

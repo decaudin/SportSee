@@ -11,7 +11,7 @@ const HNavBar = () => {
     const handleFakeLink = (e) => {
         e.preventDefault();
         alert("Page en construction ..");
-      };
+    };
 
     return(
         <div className='hNavBar'>

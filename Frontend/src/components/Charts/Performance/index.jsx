@@ -14,7 +14,7 @@ const Performance = () => {
             {userPerformance && (
                 <ResponsiveContainer>
                     <RadarChart data={formatPerformanceData(userPerformance)}>
-                        <PolarGrid radialLines={false} />
+                        <PolarGrid stroke="#fff" radialLines={false} />
                         <PolarAngleAxis dataKey="subject" stroke="#fff" tickLine={false} tick={(props) => customedLabels(props)} />
                         <Radar name="Performance" dataKey="value" fill="rgba(255, 1, 1, 0.70)" />
                     </RadarChart>

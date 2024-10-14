@@ -5,7 +5,7 @@ const Card = ({ icon, value, label }) => {
   
     return (
     <div className="cardContainer">
-      <img src={icon} alt={label} />
+      <img className="cardImg" src={icon} alt={label} />
       <div className="infoContainer">
         <h3 className="cardTitle">{value}</h3>
         <p className="cardText">{label}</p>

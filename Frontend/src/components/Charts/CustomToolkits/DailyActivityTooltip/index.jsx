@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 import "./index.scss"; 
 
 const DailyActivityTooltip = ({ active, payload }) => {
+
     if (active && payload && payload.length) {
+        
         return (
             <div className="dailyTooltip">
                 <p className="label">

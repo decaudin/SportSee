@@ -17,7 +17,7 @@ const UserCard = () => {
         {userData && (
             <>
                 <Card icon={calories} value={`${userData.keyData.calorieCount.toLocaleString('en-US')}kCal`} label="Calories" />
-                <Card icon={protein} value={`${userData.keyData.proteinCount.toLocaleString('en-US')}g`} label="Protéines" />
+                <Card icon={protein} value={`${userData.keyData.proteinCount.toLocaleString('en-US')}g`} label="Proteines" />
                 <Card icon={carbs} value={`${userData.keyData.carbohydrateCount.toLocaleString('en-US')}g`} label="Glucides" />
                 <Card icon={fat} value={`${userData.keyData.lipidCount.toLocaleString('en-US')}g`} label="Lipides" />           
             </>      

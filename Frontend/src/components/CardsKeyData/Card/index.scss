@@ -1,22 +1,25 @@
 .cardContainer {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     border-radius: 5px;
     background: #FBFBFB;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
     height: 124px;
+    
+    .cardImg {
+        margin-left: 12%;
+        margin-right: 10%;
+    }
 
-    .infoContainer {
-        height: 60px;
+    .cardTitle {
+        margin-bottom: -7px;
+        font-size: 1.35vw;
+    }
 
-        .cardTitle {
-            margin-top: 7px;
-            margin-bottom: -7px;
-        }
-
-        .cardText {
-            font-size: 14px;
-        }
-    } 
+    .cardText {
+        font-size: 1vw;
+        line-height: 24px;
+        color: #74798C;
+    }
 }
+

@@ -7,14 +7,11 @@
 
     .averageTitle {
         color: #fff;
-        width: 70%;
+        opacity: 0.504;
+        width: 13%;
         font-size: 15px;
         font-weight: 500;
         margin-left: 25px;
-    }
-
-    svg.recharts-surface {
-        height: 200px !important;
-        margin-left: -25px;
+        position: absolute;
     }
 }
