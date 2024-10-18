@@ -5,11 +5,11 @@ export const AverageLenghtTooltip = ({ active, payload }) => {
 
     if (active && payload && payload.length) {
 
-    return (
-        <div className="averageTooltip">
-            <p >{`${payload[0].value} min`}</p>
-        </div>
-    );
+        return (
+            <div className="averageTooltip">
+                <p >{`${payload[0].value} min`}</p>
+            </div>
+        );
     }
     return null;
 };

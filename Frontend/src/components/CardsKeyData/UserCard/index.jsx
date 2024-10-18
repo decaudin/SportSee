@@ -11,19 +11,19 @@ const UserCard = () => {
     const { userData, isLoading, isError } = useData();
   
     return (
-    <div className="cardsContainer">
-        {isLoading && <p>Chargement ...</p>}
-        {isError && <p>Une erreur est survenue</p>}
-        {userData && (
-            <>
-                <Card icon={calories} value={`${userData.keyData.calorieCount.toLocaleString('en-US')}kCal`} label="Calories" />
-                <Card icon={protein} value={`${userData.keyData.proteinCount.toLocaleString('en-US')}g`} label="Proteines" />
-                <Card icon={carbs} value={`${userData.keyData.carbohydrateCount.toLocaleString('en-US')}g`} label="Glucides" />
-                <Card icon={fat} value={`${userData.keyData.lipidCount.toLocaleString('en-US')}g`} label="Lipides" />           
-            </>      
-        )}
-    </div>
-  );
+        <div className="cardsContainer">
+            {isLoading && <p>Chargement ...</p>}
+            {isError && <p>Une erreur est survenue</p>}
+            {userData && (
+                <>
+                    <Card icon={calories} value={`${userData.keyData.calorieCount.toLocaleString('en-US')}kCal`} label="Calories" />
+                    <Card icon={protein} value={`${userData.keyData.proteinCount.toLocaleString('en-US')}g`} label="Proteines" />
+                    <Card icon={carbs} value={`${userData.keyData.carbohydrateCount.toLocaleString('en-US')}g`} label="Glucides" />
+                    <Card icon={fat} value={`${userData.keyData.lipidCount.toLocaleString('en-US')}g`} label="Lipides" />           
+                </>      
+            )}
+        </div>
+    );
 };
 
 export default UserCard;
